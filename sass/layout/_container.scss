@@ -1,0 +1,4 @@
+.container{
+    @include column-flex;
+    @include set-width-height(100%, auto);
+}

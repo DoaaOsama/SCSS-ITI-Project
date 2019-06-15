@@ -1,0 +1,12 @@
+.gallery{
+    @include set-width-height(100%, auto);
+    display:flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+
+    &__item{
+        @include set-width-height(25%, auto);
+        width: 25% ;
+        height: $small-image-width - 3.09rem;
+    }
+}

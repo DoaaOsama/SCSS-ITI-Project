@@ -1,0 +1,54 @@
+.caraousel {
+    @include set-width-height(100%, auto);
+    @include row-flex();
+    justify-content: space-evenly;
+
+    &__data{
+        text-align: center;
+        @include set-width-height(50%, auto);
+        @include column-flex();
+        justify-content: space-between;
+    }
+
+    &__links{
+        margin-top: 2rem;
+        @include set-width-height(100%, auto);
+        @include row-flex();
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__icon{
+        font-size: 2rem;
+        color:$color-text-seconadry;
+    }
+
+    &__thumbnail{
+        display: inline-block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-clip: padding-box;
+        @include set-width-height(7rem , 7rem);
+        border-style: groove;
+        border-width: 0.5px;
+        border-color: $color-text-seconadry;
+    }
+
+    &__slides{
+        @include set-width-height(30.875rem, 30.25rem);
+        @include row-flex();
+        overflow: hidden;
+
+        &::--webkit-scrollbar {
+            @include set-width-height(10px, 10px);  
+        }
+    }
+
+    &__slide{
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-shrink: 0;
+        @include set-width-height(100%, 100%);
+        font-size: 100px;  
+    }
+  }  

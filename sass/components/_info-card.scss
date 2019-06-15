@@ -1,0 +1,22 @@
+.info-card{
+    display:inline-flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @include set-width-height(46.5625rem, 25.3125rem);
+    padding-top: 1rem;
+    background-color: $color-text-primary;
+
+    &__info{
+        @include set-width-height(100%, auto);
+        padding-top: 1rem;
+        display:flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__column{
+        @include set-width-height(30%, auto);
+        @include column-flex();   
+    }
+}

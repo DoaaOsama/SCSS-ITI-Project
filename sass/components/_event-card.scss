@@ -1,0 +1,32 @@
+.event-card{
+    display:flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    @include set-width-height(18.75rem, 17.0625rem);
+    padding-left: 1rem;
+    @include block-color(rgba(0, 0, 0, 0.8), $color-text-seconadry-light);
+
+    &__details{
+        @include set-width-height(100%, auto);
+        font-size: 12px;
+    }
+
+    &__date{
+        margin-right: 1rem;
+    }
+
+    &__description{
+        text-align: left;
+        margin: 0rem;
+        color:$color-text-seconadry-light;
+        font-size: 0.9375rem;
+    }
+
+    &__link{
+        font-size: 12px;
+    }
+
+    
+    
+}

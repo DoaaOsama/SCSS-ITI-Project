@@ -1,0 +1,25 @@
+.imagedetails{
+    @include set-width-height(40%, auto);
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+
+    &__image-box{
+        display: inline-block;
+        @include set-width-height(25rem, 20.625rem);
+    }
+
+    &__details{
+        position: absolute;
+        left: 43%;
+    }
+    
+    &:hover{
+        .image__image{
+            opacity: 0.7;
+        }
+        .event-card__icon, .event-card__link, .event-card__go{
+            color: $color-primary;
+        }
+    }
+}

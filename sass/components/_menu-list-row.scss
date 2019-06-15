@@ -1,0 +1,19 @@
+.menu-list-row{
+    @include set-width-height(60.625rem, 15rem);
+    
+
+    position: absolute;
+    padding-top: 20px;
+    display: none;
+    list-style-type: none;
+    left: -30.3125rem + ($padding-nav-list-btn); 
+    &__item{
+        @include set-width-height(15rem, auto);
+        padding: $padding-nav-list-btn $padding-nav-list-btn;
+        background-color: $color-primary;
+        transition: all 0.5s ease-in-out;
+        border-bottom: 0.5px solid transparentize($color: grey , $amount: 0.5);
+        
+    }
+}
+

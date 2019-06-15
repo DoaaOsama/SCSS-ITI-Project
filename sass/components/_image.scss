@@ -1,0 +1,36 @@
+.image{
+    @include set-width-height(100%, 100%);
+    overflow: hidden;
+    padding: 0px;
+    background-color: $color-text-primary;
+
+    &__image{ 
+        transition: all 0.3s ease-in-out ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        @include set-width-height(100%, 100%);
+    }
+
+    &__image-scale{  
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include set-width-height(100%, 100%);
+        transition: all 0.5s ease-in-out ; 
+        &:hover{
+            transform: scale(1.1,1.1);
+        }
+    }
+
+    &:hover{
+        .description-box--scaled{
+            transition: all 0.6s ease-out;
+            transform: scaleX(1);
+        }
+        .zoombox{
+            opacity: 1;
+            top:0;
+            height: 100%;
+        }
+    }
+}

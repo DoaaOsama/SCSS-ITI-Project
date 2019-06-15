@@ -1,0 +1,61 @@
+.btn
+{
+    @include column-flex();
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: $padding-btn-top-bottmon $padding-btn-top-left-right;
+    border: 0.1875rem;
+    border-style: solid;
+    border-color: $color-primary;
+    transition: background-color  .5s ease-in-out;
+    
+    &__text{
+    display: inline-block;
+    transform: skewX(-$transform-skew-button);
+    }
+
+    &__skew
+    {
+        display: inline-block;
+        transform:skewX($transform-skew-button);
+    
+    }
+
+    &__primary
+    {
+        @include block-color($color-transparent, $color-text-primary);
+        &:hover
+        {
+            @include hover();
+        }
+    }
+
+    &__light
+    {
+        border-color: $color-text-primary;
+        @include block-color($color-transparent, $color-text-primary);
+        &:hover
+        {
+            @include hover();
+            border-color:$color-primary;
+        }
+    }
+
+    &__inverse-primary{
+        @include block-color($color-primary, $color-text-primary);
+        &:hover
+        {
+            background-color: transparent;
+        }
+    }
+
+    &__dark-text{
+        @include block-color($color-transparent, $color-headers-primary);
+        &:hover
+        {
+            @include hover();
+        }
+    }
+
+    
+}

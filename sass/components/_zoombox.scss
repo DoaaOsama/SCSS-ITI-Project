@@ -1,0 +1,45 @@
+.zoombox{
+    top: 50%;
+    position: relative;
+    @include set-width-height(auto, 50%);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+
+
+    &__iconbox{
+        @include set-width-height(auto, 80%);
+        background-color: transparentize($color: #000000, $amount: 0.25);
+        text-align: center;
+    }
+
+    &__icon{
+        position:relative;
+        top: calc(50% - 1rem);
+        font-size: 2.75rem;
+        color: $color-primary;
+        &:hover{
+            color: transparentize($color: $color-primary, $amount: 0.5);
+            transition: color 0.2 ease-in-out;
+        }
+    }
+
+    &__footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include set-width-height(auto, 20%);
+        text-align: center;
+        background-color: black;
+    }
+
+    &__text{
+        color: $color-text-primary;
+        &:hover{
+            color: transparentize($color-text-primary, $amount: 0.25);
+            transition: color 0.2 ease-in-out;
+        }
+    }
+}

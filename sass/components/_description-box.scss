@@ -1,0 +1,41 @@
+.description-box{
+    @include set-width-height(100%, 100%);
+    transition: all 0.6s ease-out;
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    
+
+    &--scaled{
+        transform: ScaleX(0.0001);
+    }
+
+    &--transparent-dark{
+        background-color: transparentize($color: #000000, $amount: 0.6); 
+    }
+
+    &--light-color{
+        background-color: transparent; 
+    }
+    
+    &__text-primary{
+        color: $color-text-primary;
+        text-align: center;
+    }
+
+    &__text-dark{
+        color: $color-text-seconadry ;
+    }
+    
+    &__header{
+        line-height: 2rem;
+        &--primary{
+            border-bottom: 2px solid $color-primary ;
+        }
+        &--dark{
+            color: $color-text-seconadry;
+            border-bottom: 2px solid grey ;
+        }
+    }
+}

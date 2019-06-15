@@ -1,0 +1,22 @@
+.info-form{
+    @include set-width-height(100%, auto);
+    height:37.3125rem;
+    position:relative;
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__info{
+        position: absolute;
+        left:5%;
+    }
+
+    &__form{
+        position: absolute;
+        left:58% ;
+        top: -15%;
+    }
+}

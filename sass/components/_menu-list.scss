@@ -1,0 +1,44 @@
+.menu-list{
+    position: absolute;
+    padding-top: 20px;
+    @include set-width-height($menu_item_width, auto);
+    display: none;
+    flex-flow: column;
+    list-style-type: none;
+
+    &__item{
+        position: relative;
+        padding: $padding-nav-list-btn $padding-nav-list-btn;
+        background-color: $color-primary;
+        transition: all 0.5s ease-in-out;
+        border-bottom: 0.5px solid transparentize($color: grey , $amount: 0.5);
+        &:hover{
+            .menu-list__sub{
+                display: flex;
+            }
+        }  
+    }
+
+    &__text{
+        @include row-flex();
+        justify-content: space-between;
+        color: $color-text-primary;
+        &:hover{
+            color: #000000;
+        }      
+    }
+
+    &__sub{
+        position: absolute;
+        padding-top: 20px;
+        @include set-width-height($menu_item_width, auto);
+        flex-flow: column;
+        list-style-type: none;
+        display: none;
+        top: -42%;
+        left: $menu_item_width;
+        &:hover{
+        box-shadow: -2px 0px transparentize($color: black, $amount: 0.9);
+        }
+    }
+}

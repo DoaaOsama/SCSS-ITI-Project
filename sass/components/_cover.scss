@@ -1,0 +1,70 @@
+.cover{
+    @include set-width-height(100%, 31.25rem);
+    @include background-image-properties();
+    @include column-flex();
+
+    &__card{
+        @include column-flex();
+        justify-content: center;
+        @include set-width-height(50%, 100%);
+        transform: skew($transform-skew-button);
+        padding: 2rem;
+        background:$color-blog-item-background;     
+    }
+
+    &__content{
+        @include set-width-height(auto, 100%);
+        text-align: center;
+        transform: skew(-$transform-skew-button);
+        @include column-flex();
+        justify-content: space-evenly;
+
+        & > p{
+            font-size:0.75rem;
+        }
+    }
+
+    &__caraousel{
+        @include column-flex();
+    }
+
+    &__slides{
+        @include set-width-height(8rem, 8rem);
+        border-radius: 50%; 
+    }
+
+    &__h4{
+        color:$color-text-seconadry;
+        font-weight: bold;
+    }
+
+    &__links{
+        justify-content: center;
+    }
+
+    &__thumbnail{
+        @include set-width-height(2.875rem, 2.875rem);
+        border: none;
+        border-radius: 50%;
+        margin: 0.5rem;
+    }
+
+    &__btns{
+        @include row-flex(); 
+       justify-content: space-evenly;
+    }
+
+    &__btn{
+        margin: 0.2rem;
+        border-style: solid;
+        border-color: black;
+        border:5px;
+        @include set-width-height(15px, 5px);
+        transform: skew(-20deg);
+        background: $color-text-seconadry-light;
+    }
+
+    &__btn--red{
+      background: red;
+    }
+}

@@ -1,0 +1,20 @@
+.form-card{
+    @include column-flex();
+    background-color:black;
+    @include set-width-height(29.687rem, auto);
+    padding: 3rem 0rem; 
+
+    &__h3{
+        color:$color-text-primary;
+    }
+
+    &__form{
+        width: 60%;
+        @include column-flex();
+    }
+
+    &__date{
+        &::-webkit-inner-spin-button { display: none; }
+        &::-webkit-calendar-picker-indicator { background: transparent; }
+    }
+}

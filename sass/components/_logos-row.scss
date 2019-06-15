@@ -1,0 +1,7 @@
+.logos-row{
+    @include set-width-height(100%, 19.375rem);
+    @include row-flex();
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: $color-blog-item-background;
+}

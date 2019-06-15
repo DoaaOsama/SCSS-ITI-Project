@@ -1,0 +1,41 @@
+.navbar{
+    display:flex;
+    justify-content: center;
+    list-style-type: none;
+    background: transparent;
+    
+
+    &__column-item{
+        position: relative;
+        margin: 1rem;
+        &:hover{
+            .menu-list{
+                display: flex;
+            }
+        }
+    }
+
+    &__row-item{
+        position: relative;
+        margin: 1rem;
+        &:hover{
+            .menu-list-row{
+                display: flex;
+            }
+        }
+    }
+
+    &__text{
+        font-size: 0.875rem;
+        &--red{
+            color: $color-primary;
+        }
+        &--white{
+            color: $color-text-primary;
+                
+            &:hover{
+                color: $color-primary;
+            }
+        }
+    }
+}

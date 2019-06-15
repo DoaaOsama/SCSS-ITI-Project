@@ -1,0 +1,14 @@
+.section{
+    @include column-flex();
+    margin-top: 5rem;
+    @include set-width-height(100%, auto);
+    &--large{
+        margin-top:10rem;
+    }
+
+    &__row{
+        @include set-width-height(100%, auto);
+        display: flex;
+        justify-content: space-evenly;
+    }
+}

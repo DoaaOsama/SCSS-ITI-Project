@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+// html{
+//     // font-size: 62.5%;
+// }
+
+body{  
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    width: 100%;
+    height: 2.125rem;
+    font-size: 0.875rem;
+    margin-bottom: 1.5625rem;
+    box-shadow: none;
+    color: $color-text-primary;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    &:focus{
+        outline: none;
+    } 
+    &::placeholder{
+        color: $color-text-primary;
+    }
+  }

@@ -1,0 +1,33 @@
+@mixin block-color($back-color, $fore-color) {
+    background-color: $back-color;
+    color: $fore-color;
+}
+
+@mixin hover() {
+    background-color: $color-primary;
+}
+
+@mixin set-width-height($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin column-flex(){
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+@mixin row-flex(){
+    display: flex;
+    align-items: center;
+}
+
+@mixin background-image-properties(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+

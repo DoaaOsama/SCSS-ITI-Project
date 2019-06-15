@@ -1,0 +1,64 @@
+.card{
+    @include set-width-height($card-width, $card-height);
+    @include column-flex();
+    background-color: $color-blog-item-background; 
+
+    &__image{
+        display: inline-block;
+        @include set-width-height(100%, 51.5%);
+        &:hover{
+            .description-box{
+                &__text-primary{
+                    color:$color-primary;
+                }
+            }
+        }
+    }
+
+    &__content{
+        @include set-width-height(100%, 100%);
+        @include column-flex();
+        justify-content: space-between;
+    }
+
+    &__body{
+        @include set-width-height(100%, 100%);
+        position: relative;
+        top: -2.3125rem;
+        @include column-flex();
+        
+    }
+
+    
+    &__footer{
+        margin-bottom: 2%;
+        @include set-width-height(100%, auto);
+        @include row-flex();
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    
+
+    &__date{
+        color:$color-text-seconadry;
+    }
+
+    &__read-more{
+        transition-delay: 0.1s;
+        color:$color-text-seconadry;
+    }
+
+    &:hover{
+        .description-box{
+            transition: all 0.6s ease-out;
+            transform: scaleX(1);
+        }
+        .card__date{
+            color:$color-primary;
+        }
+        .card__read-more{
+            color:$color-primary; 
+        }
+     }
+}
